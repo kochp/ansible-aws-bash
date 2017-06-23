@@ -28,7 +28,8 @@ RUN apt-get update && \
     ca-certificates \
     curl \
     gnupg2 \
-    software-properties-common
+    software-properties-common \
+    groff
     
 
 
