@@ -31,8 +31,8 @@ The follwoing tool will be provices by this shell
 ## How to build and push
 
     docker login
-    docker build -t kochp/aws-automation-bash:v1.3 .
-    docker push kochp/aws-automation-bash:v1.3
+    docker build -t kochp/ansible-aws-bash:v1.3 .
+    docker push kochp/ansible-aws-bash:v1.3
 
 ## Dependencies
 
