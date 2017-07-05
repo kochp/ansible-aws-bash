@@ -29,7 +29,8 @@ RUN apt-get update && \
     curl \
     gnupg2 \
     software-properties-common \
-    groff
+    groff \
+    net-tools
     
 
 
@@ -50,5 +51,8 @@ RUN add-apt-repository \
 
 RUN apt-get -y update && \
     apt-get -y install sudo docker-ce
+
+# add the host-ip address as dockerhost to etc hosts: https://www.reddit.com/r/devops/comments/6d6dcu/connecting_to_localhost_of_the_machine_from/
+RUN echo 'echo $(netstat -nr | grep '"'"'^0\.0\.0\.0'"'"' | awk '"'"'{print $2}'"'"' ) dockerhost >> /etc/hosts' >> /root/.bashrc
 
 WORKDIR /project
