@@ -17,6 +17,7 @@ RUN apt-get update && \
     python \
     python-pip \
     python-virtualenv \
+    python-lxml \
     openssh-client \
     jq \
     git \
