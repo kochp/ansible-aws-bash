@@ -1,4 +1,4 @@
-# aws-automation-bash
+# ansible-aws-bash
 A docker project to create a shall with all nessasary tools to automate AWS with ansible, maven and docker.
 
 The idea is to create a environment which can be reproduced ans shared, but will not influence your own environment. 
@@ -19,7 +19,7 @@ The follwoing tool will be provices by this shell
  
  You can start the bash of this container with the follwing command:
  
-    docker run -ti -v $(pwd):/project -v ~/.aws:/root/.aws -v $HOME/.ssh:/root/.ssh  -v /var/run/docker.sock:/var/run/docker.sock kochp/ansible-aws-bash:v1.4 bash
+    docker run -ti -v $(pwd):/project -v ~/.aws:/root/.aws -v $HOME/.ssh:/root/.ssh  -v /var/run/docker.sock:/var/run/docker.sock kochp/ansible-aws-bash:v1.5 bash
     
  This command configures the follwing option: 
  
@@ -37,14 +37,14 @@ The follwoing tool will be provices by this shell
      
  If you want to do that, make sure you are using the "host" network mode like this:
     
-    docker run -ti --net="host"  -v $(pwd):/project -v ~/.aws:/root/.aws -v $HOME/.ssh:/root/.ssh  -v /var/run/docker.sock:/var/run/docker.sock kochp/ansible-aws-bash:v1.4 bash
+    docker run -ti --net="host"  -v $(pwd):/project -v ~/.aws:/root/.aws -v $HOME/.ssh:/root/.ssh  -v /var/run/docker.sock:/var/run/docker.sock kochp/ansible-aws-bash:v1.5 bash
 
 
 ## How to build and push
 
     docker login
-    docker build -t kochp/ansible-aws-bash:v1.3 .
-    docker push kochp/ansible-aws-bash:v1.3
+    docker build -t kochp/ansible-aws-bash:v1.5 .
+    docker push kochp/ansible-aws-bash:v1.5
 
 ## Dependencies
 
@@ -68,7 +68,7 @@ The shared folder with the name _docker_ and the path _c:\docker_ is now configu
 
 * Modify the command above to start to the docker container with the path of the volumes mounted on the docker host:
 
-    docker run -ti -v /docker/project:/project -v /docker/aws:/root/.aws -v /docker/ssh:/root/.ssh -v /var/run/docker.sock:/var/run/docker.sock kochp/ansible-aws-bash:v1.4 bash
+    docker run -ti -v /docker/project:/project -v /docker/aws:/root/.aws -v /docker/ssh:/root/.ssh -v /var/run/docker.sock:/var/run/docker.sock kochp/ansible-aws-bash:v1.5 bash
 
  
  

@@ -18,6 +18,7 @@ RUN apt-get update && \
     python-pip \
     python-virtualenv \
     python-lxml \
+    python-pexpect \
     openssh-client \
     jq \
     git \
@@ -55,5 +56,7 @@ RUN apt-get -y update && \
 
 # add the host-ip address as dockerhost to etc hosts: https://www.reddit.com/r/devops/comments/6d6dcu/connecting_to_localhost_of_the_machine_from/
 RUN echo 'echo $(netstat -nr | grep '"'"'^0\.0\.0\.0'"'"' | awk '"'"'{print $2}'"'"' ) dockerhost >> /etc/hosts' >> /root/.bashrc
+
+RUN pip install --upgrade pip && pip install ansible --upgrade
 
 WORKDIR /project

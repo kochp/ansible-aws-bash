@@ -1,7 +1,7 @@
 #!/bin/bash
 
-docker build -t kochp/aws-automation-bash:v1.3 .
-docker push kochp/aws-automation-bash:v1.3
+docker build -t kochp/ansible-aws-bash:v1.6 .
+docker push kochp/ansible-aws-bash:v1.6
 
 
 
