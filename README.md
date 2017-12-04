@@ -19,7 +19,7 @@ The follwoing tool will be provices by this shell
  
  You can start the bash of this container with the follwing command:
  
-    docker run -ti -v $(pwd):/project -v ~/.aws:/root/.aws -v $HOME/.ssh:/root/.ssh  -v /var/run/docker.sock:/var/run/docker.sock kochp/ansible-aws-bash:v1.5 bash
+    docker run -ti -v $(pwd):/project -v ~/.aws:/root/.aws -v $HOME/.ssh:/root/.ssh  -v /var/run/docker.sock:/var/run/docker.sock kochp/ansible-aws-bash:v1.6 bash
     
  This command configures the follwing option: 
  
